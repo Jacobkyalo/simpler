@@ -12,6 +12,20 @@ body {
   width: 100%;
   line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px -2px rgba(0, 0, 0, 0.25);
+}
+body::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
 }
 .header {
   padding: 20px;
@@ -58,6 +72,7 @@ body {
 .unordered-navs ul li a {
   text-decoration: none;
   color: #000;
+  font-weight: 500;
   padding: 5px 15px;
 }
 .unordered-navs ul li a:hover {
@@ -97,11 +112,14 @@ body {
   text-align: center;
   margin: 30px auto;
   padding-bottom: 10px;
+  color: #fff;
   border-bottom: 2px solid var(--primary-color);
 }
 .logo img {
   height: 70px;
   width: 70px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #111;
 }
 
 .softwares-grid {
@@ -110,26 +128,83 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  border-bottom: 2px solid var(--primary-color);
 }
 .card {
   width: 270px;
-  height: 450px;
+  height: 500px;
   padding: 20px 10px;
   background: #fff;
   border: 1px solid #111;
   border-radius: 10px;
   text-align: center;
   margin: 10px;
-  box-shadow: 0px 5px 8px var(--primary-color);
+  box-shadow: 5px 4px 10px var(--primary-color);
+  margin-bottom: 30px;
 }
-.download-vs-code {
-  margin: 30px auto;
-  background: var(--primary-color);
-  border-radius: 10px;
-  padding: 10px 20px;
+.card p {
+  font-size: 20px;
   text-align: center;
 }
-.download-vs-code a {
+.card a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.download-ide {
+  margin: 80px auto;
+  background: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+.download-ide a {
   color: #fff;
   text-decoration: none;
+}
+.python-files {
+  background: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.python-ide {
+  padding: 10px 0;
+  background: var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+}
+.python-files a {
+  color: #fff;
+  text-align: center;
+}
+.python-ide a {
+  color: #fff;
+  text-align: center;
+}
+.title h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+#footer {
+  margin: 20px auto;
+  text-align: center;
+}
+#footer p {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 70%;
+  }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+  }
 }
