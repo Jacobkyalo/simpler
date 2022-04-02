@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-color: rgb(44, 20, 202);
+  --primary-color: #0e6cff;
 }
 body {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
   margin: auto;
   width: 100%;
   line-height: 1.6;
@@ -39,8 +40,9 @@ body::-webkit-scrollbar-track {
   right: 0;
   left: 0;
   height: 10vh;
-  background-color: #fff;
-  z-index: 10;
+  background-color: #17141d;
+  z-index: 40;
+  box-shadow: 5px 4px 10px var(--primary-color);
 }
 .navbar h2 {
   font-size: 1.7rem;
@@ -71,7 +73,7 @@ body::-webkit-scrollbar-track {
 }
 .unordered-navs ul li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: 500;
   padding: 5px 15px;
 }
@@ -79,8 +81,7 @@ body::-webkit-scrollbar-track {
   border: 2px dotted var(--primary-color);
 }
 .content-upper {
-  background-color: rgb(133, 128, 128, 0.5);
-  color: #111;
+  color: var(--primary-color);
   height: 70vh;
   margin-top: 10px;
   display: flex;
@@ -138,7 +139,7 @@ body::-webkit-scrollbar-track {
   width: 270px;
   height: 500px;
   padding: 20px 10px;
-  background: #fff;
+  /* background: #fff; */
   border: 1px solid #111;
   border-radius: 10px;
   text-align: center;
@@ -192,6 +193,21 @@ body::-webkit-scrollbar-track {
   font-weight: 700;
   margin-top: 20px;
 }
+.about-us {
+  padding: 20px;
+  color: #fff;
+  line-height: 1.6;
+  border-bottom: 1px solid var(--primary-color);
+}
+.about-us h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.about-us p {
+  text-align: center;
+  padding: 5px;
+}
 #footer {
   margin: 20px auto;
   text-align: center;
@@ -202,16 +218,17 @@ body::-webkit-scrollbar-track {
   font-weight: 300;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .card {
     width: 70%;
   }
   .navbar {
     flex-direction: column;
-    height: auto;
+    height: 22vh;
     margin: auto;
   }
   .content-upper {
+    height: 120vh;
     flex-direction: column;
     text-align: center;
   }
